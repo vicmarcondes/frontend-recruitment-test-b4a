@@ -1,0 +1,43 @@
+.user-image {
+  width: 280px !important;
+  height: 400px !important;
+}
+
+.content {
+  background-color: white;
+  width: 248px;
+  margin-top: -56px;
+  z-index: 10;
+  position: relative;
+  box-shadow: 4px 4px 4px rgba(234, 208, 250, 0.25);
+  border-radius: 8px;
+  padding: 16px;
+  // align-self: center;
+  margin-left: 16px;
+
+  .username {
+    display: flex;
+    align-self: center;
+
+    p {
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 24px;
+      font-weight: 400;
+      margin-left: 8px;
+    }
+
+    img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  .text {
+    color: #6C757D;
+    // font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    margin-top: 8px;
+  }
+}

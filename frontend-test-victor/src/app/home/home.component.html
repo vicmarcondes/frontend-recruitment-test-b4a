@@ -6,4 +6,13 @@
 
   <app-banner></app-banner>
 
+  <div class="posts">
+    <owl-carousel-o [options]="customOptionsPosts">
+      <ng-container *ngFor="let post of posts">
+        <ng-template class="slide" carouselSlide>
+          <app-post [post]="post"></app-post>
+        </ng-template>
+      </ng-container>
+    </owl-carousel-o> 
+  </div>
 </div>
