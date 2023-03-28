@@ -15,4 +15,16 @@
       </ng-container>
     </owl-carousel-o> 
   </div>
+
+  <div class="products">
+    <h2>Nossos Produtos</h2>
+
+    <owl-carousel-o [options]="customOptionsProducts">
+      <ng-container *ngFor="let product of products">
+        <ng-template class="slide" carouselSlide>
+          <app-product [product]="product"></app-product>
+        </ng-template>
+      </ng-container>
+    </owl-carousel-o> 
+  </div>
 </div>

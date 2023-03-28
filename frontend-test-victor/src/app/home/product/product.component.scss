@@ -1,0 +1,71 @@
+@import "../../../variables.scss";
+
+.product {
+  border: 1px solid #F4E7FC;
+  border-radius: 16px;
+  width: 210px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 24px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-bottom: 24px;
+  position: relative;
+
+  img {
+    height: 190px;
+    width: 190px;
+  }
+
+  &:hover {
+    box-shadow: 3px 2px 8px rgba(221, 175, 250, 0.35);
+  }
+
+  .info {
+    padding: 8px;
+    
+    .title {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 19px;
+      color: #464C52;
+    }
+
+    .original-value, .current-value {
+      color: $light-black;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 16px;
+      margin-top: 4px;
+
+      span {
+        font-size: 15px;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .tag {
+    position: absolute;
+    padding: 4px 8px;
+    top: 8px;
+    left: 8px;
+    color: $light-black;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    z-index: 10;
+
+    &.protection {
+      background-color: #FB9EAE;
+    }
+    &.hydratation {
+      background-color: #AFE7FF;
+    }
+    &.cleaning {
+      background-color: $light-pink;
+    }
+  }
+}

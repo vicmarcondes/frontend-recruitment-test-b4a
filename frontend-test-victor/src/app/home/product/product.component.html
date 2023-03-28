@@ -1,0 +1,11 @@
+<div class="product" >
+  <img [src]="product.imageSrc">
+  <span class="tag" [ngClass]="{'protection': product.tag == 'Proteção', 'hydratation': product.tag == 'Hidratação', 'cleaning': product.tag == 'Limpeza'}">
+    {{product.tag}}
+  </span>
+  <div class="info">
+    <p class="title">{{product.title}}</p>
+    <p class="original-value">De: R${{product.originalValue }}</p>
+    <p class="current-value">Por: <span>R${{product.currentValue}}</span></p>
+  </div>
+</div>

@@ -49,6 +49,62 @@ export class HomeComponent implements OnInit {
 
   ]
 
+  products: any = [
+    {
+      title: "Kit Glam Beauty skincare rapidinho",
+      originalValue: "999,90",
+      currentValue: "999,80",
+      tag: "Proteção",
+      imageSrc: "../../../assets/images/product1.png"
+    },
+    {
+      title: "Máscara Glam detox de argila verde",
+      originalValue: "999,90",
+      currentValue: "999,80",
+      tag: "Hidratação",
+      imageSrc: "../../../assets/images/product2.png"
+    },
+    {
+      title: "Espuma de limpeza Glam Beauty cleam 150 ml",
+      originalValue: "999,90",
+      currentValue: "999,80",
+      tag: "Limpeza",
+      imageSrc: "../../../assets/images/product3.png"
+    },
+    {
+      title: "Hidratante com proteção solar 50 g",
+      originalValue: "999,90",
+      currentValue: "999,80",
+      tag: "Proteção",
+      imageSrc: "../../../assets/images/product4.png"
+    },
+    {
+      title: "Água micelar Glam Beauty fresh 200 ml",
+      originalValue: "999,90",
+      currentValue: "999,80",
+      tag: "Hidratação",
+      imageSrc: "../../../assets/images/product5.png"
+    },
+  ]
+
+  customOptionsProducts: OwlOptions = {
+    center: true,
+    loop: true,
+    nav: true,
+    dots: true,
+    responsive: {
+      0: {
+        items: 1,
+      },
+      600: {
+        items: 1,
+      },
+      1000: {
+        items: 5,
+      }
+    }
+  }
+
   constructor() { }
 
   ngOnInit(): void {

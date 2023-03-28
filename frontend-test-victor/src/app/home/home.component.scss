@@ -32,4 +32,17 @@
     width: 100%;
     background: linear-gradient(180deg, #DCF5FE 0%, rgba(220, 245, 254, 0) 100%);
   }
+
+  .products {
+    margin-top: 40px;
+
+    h2 {
+      color: $light-black;
+      font-size: 30px;
+      line-height: 36px;
+      text-align: center;
+      font-weight: 400;
+      margin-bottom: 40px;
+    }
+  }
 }
