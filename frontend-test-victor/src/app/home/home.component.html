@@ -1,1 +1,6 @@
-<p>home works!</p>
+<div class="home">
+  <div class="header-toast" *ngIf="showToast">
+    <p>Frete grátis acima de R$ 250,00</p>
+    <span (click)="closeToast()">X</span>
+  </div>
+</div>
