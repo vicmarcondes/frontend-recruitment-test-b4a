@@ -8,13 +8,15 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PostComponent } from './home/post/post.component';
+import { ProductComponent } from './home/product/product.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     BannerComponent,
-    PostComponent
+    PostComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
