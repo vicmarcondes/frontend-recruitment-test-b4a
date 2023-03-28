@@ -31,11 +31,22 @@
   </div>
 
   <footer>
-    <p>Cadastre-se aqui e receba descontos e novidades</p>
-    <form>
-      <input type="text" placeholder="Digite seu nome">
-      <input type="text" placeholder="Digite e-mail">
-      <button>Enviar</button>
-    </form> 
+    <ng-container *ngIf="!emailSuccess">
+      <p>Cadastre-se aqui e receba descontos e novidades</p>
+  
+      <form [formGroup]="registerForm">
+        <input formControlName="name" type="text" placeholder="Digite seu nome">
+        <input formControlName="email" type="text" placeholder="Digite e-mail">
+        <button (click)="register()">Enviar</button>
+      </form> 
+    </ng-container>
+    <ng-container *ngIf="emailSuccess">
+      <div class="success">
+        <div class="around">
+          <img src="../../assets/images/email.png">
+        </div>
+        <p>Seu e-mail foi cadastrado com sucesso!</p>
+      </div>
+    </ng-container>
   </footer>
 </div>

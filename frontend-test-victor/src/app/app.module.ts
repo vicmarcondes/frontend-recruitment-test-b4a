@@ -9,6 +9,7 @@ import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PostComponent } from './home/post/post.component';
 import { ProductComponent } from './home/product/product.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,9 @@ import { ProductComponent } from './home/product/product.component';
     BrowserModule,
     CarouselModule,
     RouterModule,
-    BrowserAnimationsModule  
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

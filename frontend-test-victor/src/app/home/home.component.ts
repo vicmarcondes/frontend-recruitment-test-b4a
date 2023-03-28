@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
@@ -105,6 +106,12 @@ export class HomeComponent implements OnInit {
     }
   }
 
+  registerForm = new FormGroup({
+    name: new FormControl('', [Validators.required]),
+    email: new FormControl('', [Validators.required]),
+  });
+  emailSuccess: boolean;
+
   constructor() { }
 
   ngOnInit(): void {
@@ -116,6 +123,15 @@ export class HomeComponent implements OnInit {
   closeToast() {
     this.showToast = false;
     localStorage.setItem('showToast', "false");
+  }
+
+  register() {
+    if(!this.registerForm.valid) {
+      alert('erro')
+      return;
+    }
+
+    this.emailSuccess = true;
   }
 
 }
