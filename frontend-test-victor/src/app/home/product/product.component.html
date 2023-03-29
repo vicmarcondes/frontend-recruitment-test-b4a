@@ -3,12 +3,13 @@
   <span class="tag" [ngClass]="{'protection': product.tag == 'Proteção', 'hydratation': product.tag == 'Hidratação', 'cleaning': product.tag == 'Limpeza'}">
     {{product.tag}}
   </span>
+  <button class="desktop-button"><img src="../../../assets/icons/sacola.svg"> Comprar</button>
   <div class="info">
     <p class="title">{{product.title}}</p>
     <p class="original-value">De: R${{product.originalValue }}</p>
     <p class="current-value">Por: <span>R${{product.currentValue}}</span></p>
     
-    <button *ngIf="currentProduct == product.index">Comprar</button>
+    <button class="mobile-button" *ngIf="currentProduct == product.index"><img src="../../../assets/icons/sacola.svg"> Comprar</button>
   </div>
 
 </div>

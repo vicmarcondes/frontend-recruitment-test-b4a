@@ -106,6 +106,9 @@ export class HomeComponent implements OnInit {
     loop: true,
     nav: false,
     dots: false,
+    pullDrag: false,
+    mouseDrag: false,
+    touchDrag: false,
     responsive: {
       0: {
         items: 1,

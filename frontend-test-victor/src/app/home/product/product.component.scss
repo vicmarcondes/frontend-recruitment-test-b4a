@@ -13,6 +13,39 @@
   margin-bottom: 24px;
   position: relative;
 
+  
+  button {
+    background: #EAD0FA;
+    border-radius: 50px;
+    padding: 18px 56px;
+    border: none;
+    margin: 0 auto;
+    margin-top: 32px;
+    color: $light-black;
+    font-weight: 600;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 16px;
+      height: 16px;
+      font-size: 16px;
+      margin: 0;
+      margin-right: 8px;
+    }
+  }
+
+  .desktop-button {
+    display: none;
+    padding: 10px 0px;
+    width: 90%;
+    margin: 0 auto;
+    left: 10px;
+    top: 150px
+  }
+  
   img {
     height: 190px;
     width: 190px;
@@ -21,12 +54,21 @@
 
   &:hover {
     box-shadow: 3px 2px 8px rgba(221, 175, 250, 0.35);
+    
+    .desktop-button {
+      display: flex !important;
+      position: absolute;
+    }
   }
 
   .info {
     display: flex;
     flex-direction: column;
     padding: 8px;
+
+    .mobile-button {
+      display: none;
+    }
     
     .title {
       font-weight: 400;
@@ -48,17 +90,6 @@
       }
     }
 
-    button {
-      background: #EAD0FA;
-      border-radius: 50px;
-      padding: 18px 56px;
-      border: none;
-      margin: 0 auto;
-      margin-top: 32px;
-      color: $light-black;
-      font-weight: 600;
-      font-size: 16px;
-    }
   }
 
   .tag {
@@ -87,6 +118,13 @@
 
 @media (max-width: 768px) { // mobile
   .product {
+    .info {
+      .mobile-button {
+        display: flex;
+        align-items: center;
+      }
+    }
+
     margin: 0 auto;
     width: 250px;
 
