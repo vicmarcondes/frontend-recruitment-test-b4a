@@ -17,7 +17,12 @@ export class HomeComponent implements OnInit {
     center: true,
     loop: true,
     responsive: {
-      0: {
+      375: {
+        center: true,
+        items: 1.3,
+        loop: true,
+      },
+      400: {
         center: true,
         items: 1.4,
         loop: true,

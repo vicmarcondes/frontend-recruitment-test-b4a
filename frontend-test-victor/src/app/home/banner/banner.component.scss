@@ -2,3 +2,17 @@
   width: 100%;
   background-size: contain;
 }
+
+.mobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .desktop {
+    display: none !important;
+  }
+
+  .mobile {
+    display: block;
+  }
+}
