@@ -10,6 +10,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PostComponent } from './home/post/post.component';
 import { ProductComponent } from './home/product/product.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { MatMenuModule} from '@angular/material/menu';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     BrowserAnimationsModule,
     ReactiveFormsModule,
     FormsModule,
+    MatSnackBarModule,
+    MatMenuModule
+     
   ],
   providers: [],
   bootstrap: [AppComponent]

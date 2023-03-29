@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-home',
@@ -132,11 +133,13 @@ export class HomeComponent implements OnInit {
 
   registerForm = new FormGroup({
     name: new FormControl('', [Validators.required]),
-    email: new FormControl('', [Validators.required]),
+    email: new FormControl('', [Validators.required, Validators.email]),
   });
   emailSuccess: boolean;
 
-  constructor() { }
+  constructor(
+    private snackbar: MatSnackBar
+  ) { }
 
   ngOnInit(): void {
     let toast = localStorage.getItem('showToast');
@@ -151,7 +154,13 @@ export class HomeComponent implements OnInit {
 
   register() {
     if(!this.registerForm.valid) {
-      alert('erro')
+      this.snackbar.open("Formulário inválido.", '', {
+        duration: 5000,
+        verticalPosition: 'bottom',
+        horizontalPosition: 'center',
+        panelClass: "snack-bar-danger"
+      });
+
       return;
     }
 
