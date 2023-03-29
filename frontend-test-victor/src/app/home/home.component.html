@@ -3,6 +3,38 @@
     <p>Frete grátis acima de R$ 250,00</p>
     <span (click)="closeToast()">X</span>
   </div>
+  
+  <mat-toolbar class="menu">
+    <img src="../../assets/images/logo.png">
+    <div>
+      <span mat-button >
+        Home
+      </span>
+      <span mat-button>
+        Sobre nós
+      </span>
+      <mat-menu #subMenu="matMenu" class="submenu">
+        <span mat-menu-item>
+          Limpeza
+        </span>
+        <span mat-menu-item>
+          Hidratação
+        </span>
+        <span mat-menu-item>
+          Proteção
+        </span>
+        <span mat-menu-item>
+          Kits
+        </span>
+        <span mat-menu-item>
+          Ver todos
+        </span>
+      </mat-menu>
+      <span mat-button [matMenuTriggerFor]="subMenu">
+        Loja
+      </span>
+    </div>
+  </mat-toolbar>
 
   <app-banner></app-banner>
 

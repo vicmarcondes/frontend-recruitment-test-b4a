@@ -209,5 +209,18 @@ input:focus-visible {
   }
 }
 
+.mat-menu-panel {
+  .mat-menu-item {
+    color: $light-black;
+    height: 32px;
+    line-height: 32px;
+
+    &:hover {
+      color: #CD7BFF;
+      background-color: transparent;
+    }
+  }
+}
+
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

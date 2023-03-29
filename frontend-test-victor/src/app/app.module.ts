@@ -12,6 +12,7 @@ import { ProductComponent } from './home/product/product.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { MatMenuModule} from '@angular/material/menu';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { MatMenuModule} from '@angular/material/menu';
     ReactiveFormsModule,
     FormsModule,
     MatSnackBarModule,
-    MatMenuModule
+    MatMenuModule,
+    MatToolbarModule
      
   ],
   providers: [],
