@@ -35,6 +35,23 @@
 
   .products {
     margin-top: 40px;
+    position: relative;
+
+    img {
+      position: absolute;
+      top: 194px;
+      padding: 16px 21px;
+      background-color: #FDF9FF;
+      z-index: 30;
+    }
+
+    .right {
+      right: 16px;
+    }
+
+    .left {
+      left: 16px;
+    }
 
     h2 {
       color: $light-black;
@@ -132,6 +149,24 @@
 
       button {
         padding: 16px 96px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .home {
+    footer {
+      padding: 24px 16px;
+
+      input {
+        width: 100%;
+        margin-bottom: 8px;
+      }
+
+      button {
+        margin-top:  16px;
+        width: 100%;
       }
     }
   }

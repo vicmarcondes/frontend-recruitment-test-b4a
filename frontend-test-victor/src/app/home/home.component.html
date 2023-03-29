@@ -18,11 +18,15 @@
 
   <div class="products">
     <h2>Nossos Produtos</h2>
+    
+    <img class="right" (click)="goToNext()" src="../../assets/icons/seta-direita.svg">
+    <img class="left" (click)="goToPrevious()" src="../../assets/icons/seta-esquerda.svg">
 
-    <owl-carousel-o [options]="customOptionsProducts">
+
+    <owl-carousel-o #productCarousel [options]="customOptionsProducts">
       <ng-container *ngFor="let product of products">
         <ng-template class="slide" carouselSlide>
-          <app-product [product]="product"></app-product>
+          <app-product [product]="product" [currentProduct]="currentProduct"></app-product>
         </ng-template>
       </ng-container>
     </owl-carousel-o> 
