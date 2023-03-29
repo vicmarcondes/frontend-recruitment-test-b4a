@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
@@ -8,6 +8,9 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  @ViewChild("productCarousel") productCarousel: any;
+  currentProduct: number = 0;
+
   showToast: boolean = true;
 
   customOptionsPosts: OwlOptions = {
@@ -60,6 +63,7 @@ export class HomeComponent implements OnInit {
       title: "Kit Glam Beauty skincare rapidinho",
       originalValue: "999,90",
       currentValue: "999,80",
+      index: 0,
       tag: "Proteção",
       imageSrc: "../../../assets/images/product1.png"
     },
@@ -67,6 +71,7 @@ export class HomeComponent implements OnInit {
       title: "Máscara Glam detox de argila verde",
       originalValue: "999,90",
       currentValue: "999,80",
+      index: 1,
       tag: "Hidratação",
       imageSrc: "../../../assets/images/product2.png"
     },
@@ -74,6 +79,7 @@ export class HomeComponent implements OnInit {
       title: "Espuma de limpeza Glam Beauty cleam 150 ml",
       originalValue: "999,90",
       currentValue: "999,80",
+      index: 2,
       tag: "Limpeza",
       imageSrc: "../../../assets/images/product3.png"
     },
@@ -81,6 +87,7 @@ export class HomeComponent implements OnInit {
       title: "Hidratante com proteção solar 50 g",
       originalValue: "999,90",
       currentValue: "999,80",
+      index: 3,
       tag: "Proteção",
       imageSrc: "../../../assets/images/product4.png"
     },
@@ -88,6 +95,7 @@ export class HomeComponent implements OnInit {
       title: "Água micelar Glam Beauty fresh 200 ml",
       originalValue: "999,90",
       currentValue: "999,80",
+      index: 4,
       tag: "Hidratação",
       imageSrc: "../../../assets/images/product5.png"
     },
@@ -96,11 +104,14 @@ export class HomeComponent implements OnInit {
   customOptionsProducts: OwlOptions = {
     center: true,
     loop: true,
-    nav: true,
-    dots: true,
+    nav: false,
+    dots: false,
     responsive: {
       0: {
         items: 1,
+        loop: false,
+        center: false,
+        slideBy: 1
       },
       600: {
         items: 1,
@@ -137,6 +148,24 @@ export class HomeComponent implements OnInit {
     }
 
     this.emailSuccess = true;
+  }
+
+  goToNext() {
+    if(this.currentProduct == this.products.length - 1) {
+      return;
+    }
+
+    this.productCarousel.next();
+    this.currentProduct++;
+  }
+  
+  goToPrevious() {
+    if(this.currentProduct == 0) {
+      return;
+    }
+
+    this.productCarousel.prev();
+    this.currentProduct--;
   }
 
 }

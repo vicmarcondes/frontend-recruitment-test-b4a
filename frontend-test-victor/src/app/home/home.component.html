@@ -19,8 +19,8 @@
   <div class="products">
     <h2>Nossos Produtos</h2>
     
-    <img class="right" (click)="goToNext()" src="../../assets/icons/seta-direita.svg">
-    <img class="left" (click)="goToPrevious()" src="../../assets/icons/seta-esquerda.svg">
+    <img class="right" (click)="goToNext()" [src]="currentProduct == (products.length - 1) ? '../../assets/icons/seta-direita-disabled.svg' : '../../assets/icons/seta-direita.svg'">
+    <img class="left" (click)="goToPrevious()" [src]="currentProduct == 0 ? '../../assets/icons/seta-esquerda-disabled.svg' : '../../assets/icons/seta-esquerda.svg'">
 
 
     <owl-carousel-o #productCarousel [options]="customOptionsProducts">
