@@ -11,6 +11,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 export class HomeComponent implements OnInit {
   @ViewChild("productCarousel") productCarousel: any;
   currentProduct: number = 0;
+  showShopOptions: boolean = false;
 
   showToast: boolean = true;
 
@@ -185,4 +186,11 @@ export class HomeComponent implements OnInit {
     this.currentProduct--;
   }
 
+  handleShopSubmenu() {
+    this.showShopOptions = !this.showShopOptions;
+  }
+
+  menuClosed() {
+    this.showShopOptions = false;
+  }
 }

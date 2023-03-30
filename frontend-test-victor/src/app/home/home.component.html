@@ -4,7 +4,7 @@
     <span (click)="closeToast()">X</span>
   </div>
   
-  <mat-toolbar class="menu">
+  <mat-toolbar class="menu-desktop">
     <img src="../../assets/images/logo.png">
     <div>
       <span mat-button >
@@ -35,7 +35,40 @@
       </span>
     </div>
   </mat-toolbar>
+  
+  <div class="menu-mobile">
+    <mat-icon [matMenuTriggerFor]="categories" (menuClosed)="menuClosed()"  #categoriesMenuTrigger="matMenuTrigger">menu</mat-icon>
+    <img src="../../assets/images/logo.png">
+  </div>
 
+  <mat-menu #categories="matMenu" [hasBackdrop]="true" class="side-menu">
+    <h2>Menu</h2>
+    <span mat-menu-item >Home</span>
+    <span mat-menu-item >Sobre nós</span>
+    <span mat-menu-item class="shop" (click)="handleShopSubmenu() ;$event.stopPropagation();">
+      <span>Loja</span>
+      <img *ngIf="!showShopOptions" alt="Ícone de seta para direita" src="../../assets/icons/seta-direita.svg">
+      <img *ngIf="showShopOptions" alt="Ícone de seta para baixo" src="../../assets/icons/seta-baixo.svg">
+    </span>
+    <div class="show-more"  *ngIf="showShopOptions">
+      <span mat-menu-item>
+        Limpeza
+      </span>
+      <span mat-menu-item>
+        Hidratação
+      </span>
+      <span mat-menu-item>
+        Proteção
+      </span>
+      <span mat-menu-item>
+        Kits
+      </span>
+      <span mat-menu-item>
+        Ver todos
+      </span>
+    </div>
+  </mat-menu>
+  
   <app-banner></app-banner>
 
   <div class="posts">

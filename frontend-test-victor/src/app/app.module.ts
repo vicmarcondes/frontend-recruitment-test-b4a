@@ -13,6 +13,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { MatMenuModule} from '@angular/material/menu';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -31,8 +34,10 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     FormsModule,
     MatSnackBarModule,
     MatMenuModule,
-    MatToolbarModule
-     
+    MatToolbarModule,
+    MatSidenavModule,
+    MatListModule,
+    MatIconModule     
   ],
   providers: [],
   bootstrap: [AppComponent]
