@@ -66,6 +66,18 @@
     flex-direction: column;
     padding: 8px;
 
+    img {
+      width: 58px;
+      height: 10px;
+      left: 16px;
+      margin-left: -4px;
+      margin-bottom: 4px;
+    }
+
+    p {
+      margin: 0;
+    }
+
     .mobile-button {
       display: none;
     }
