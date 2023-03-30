@@ -42,7 +42,10 @@
   </div>
 
   <mat-menu #categories="matMenu" [hasBackdrop]="true" class="side-menu">
-    <h2>Menu</h2>
+    <div class="close">
+      <mat-icon>close</mat-icon>
+    </div>
+    <h2 (click)="$event.stopPropagation();">Menu</h2>
     <span mat-menu-item >Home</span>
     <span mat-menu-item >Sobre nós</span>
     <span mat-menu-item class="shop" (click)="handleShopSubmenu() ;$event.stopPropagation();">

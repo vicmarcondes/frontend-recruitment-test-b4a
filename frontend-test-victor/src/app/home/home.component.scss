@@ -27,6 +27,7 @@
   }
 
 
+
   .menu-mobile {
     position: relative;
     display: flex;
@@ -48,6 +49,8 @@
       margin: 20px 0;
 
     }
+
+
   }
 
 
@@ -182,6 +185,18 @@
     }
   }
 }
+
+.close mat-icon {
+  position: absolute;
+  right: -12px;
+  top: 16px;
+  padding: 4px;
+  background-color: #EAD0FA;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} 
 
 
 
