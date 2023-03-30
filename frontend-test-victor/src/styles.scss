@@ -285,6 +285,15 @@ input:focus-visible {
 
 }
 
+.cdk-overlay-connected-position-bounding-box {
+  left: -16px !important;
+  height: 100vh;
+  top: 80px !important;
+
+  .cdk-overlay-pane {
+    height: 100% !important;
+  }
+}
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
